@@ -18,7 +18,7 @@ export class Home extends Component {
 		super(props);
 
 		this.state = {
-			userInput: null,
+			userInput: "",
 			searchResult: null
 		};
 
@@ -44,7 +44,16 @@ export class Home extends Component {
 	//on home page by the component ResultPre.js
 	formGetData() {
 		//builds query from user input on home page
-		var formQuery='/api/log/?' + this.state.userInput;
+		//will find all
+		//var formQuery='https://data.nasa.gov/resource/gh4g-9sfh.json?$order=name' + this.state.userInput;
+		//will find 1 name
+		//var formQuery='https://data.nasa.gov/resource/gh4g-9sfh.json?name=Atarra'
+		//will find names containing 'att'
+		//var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=name like '%25att%25'"
+		//case-insensitive		
+		var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=upper(name) like '%25ATT%25'"
+
+		//https://data.cityofchicago.org/resource/tt4n-kn4t.json?$where=upper(name)=upper('ABARCA, ANABEL')
 
 		axios.get(formQuery)
 			.then(data => {
