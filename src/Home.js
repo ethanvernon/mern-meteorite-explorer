@@ -51,7 +51,13 @@ export class Home extends Component {
 		//will find names containing 'att'
 		//var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=name like '%25att%25'"
 		//case-insensitive		
-		var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=upper(name) like '%25ATT%25'"
+		//var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=upper(name) like '%25ATT%25' " 
+		//search for more than 1 substring, case insensitve
+		var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=UPPER(name)like'%25RAMLAT%25 %25AL%25'"
+
+
+		//GET /api/id/gh4g-9sfh.json?$query=select%20*%20search%20%27Battle%20Mountain%27%20limit%20100&$$query_timeout_seconds=30&$$row_count=approximate HTTP/1.1
+//https://data.nasa.gov/api/id/gh4g-9sfh.json?$query=select%20*%20search%20%27Battle%20Mountain%27%20limit%20100&$$query_timeout_seconds=30&$$row_count=approximate
 
 		//https://data.cityofchicago.org/resource/tt4n-kn4t.json?$where=upper(name)=upper('ABARCA, ANABEL')
 
