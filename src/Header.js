@@ -49,14 +49,6 @@ export class Header extends Component {
 						<NavItem>
 							<Link to="/documentation" className='padded-nav' onClick={this.closeNav} > Documentation </Link>
 						</NavItem>
-
-						<NavItem>
-							<Link to='/log' to="/log" className='padded-nav' onClick={this.closeNav} > Log Exercise</Link>
-						</NavItem>
-
-						<NavItem>
-							<Link to='/signup' to="/signup" className='padded-nav' onClick={this.closeNav} > Sign Up </Link>
-						</NavItem>
 					</Nav>
 				</Collapse>
 			</Navbar>
