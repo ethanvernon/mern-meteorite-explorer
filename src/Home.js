@@ -42,24 +42,9 @@ export class Home extends Component {
 
 	//when the search button is clicked, sends a GET request, result to this.state.searchResult, rendered by ResultPre.js
 	formGetData() {
-		let upperCaseAndSplitQuery = this.convertUserInputToQuery();
-		let endOfQuery="";
-		let formQuery="";
 
-		for (let i=0; i<upperCaseAndSplitQuery.length;i++) {
-			endOfQuery+=("%25" + upperCaseAndSplitQuery[i] + "%25");
-		}
-
-		formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=UPPER(name)like'"+endOfQuery+"'";
-
-		//search for more than 1 substring, case insensitve
-		//var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=UPPER(name)like'%25RAMLAT%25%25AL%25'"
-
-
-		//GET /api/id/gh4g-9sfh.json?$query=select%20*%20search%20%27Battle%20Mountain%27%20limit%20100&$$query_timeout_seconds=30&$$row_count=approximate HTTP/1.1
-//https://data.nasa.gov/api/id/gh4g-9sfh.json?$query=select%20*%20search%20%27Battle%20Mountain%27%20limit%20100&$$query_timeout_seconds=30&$$row_count=approximate
-
-		//https://data.cityofchicago.org/resource/tt4n-kn4t.json?$where=upper(name)=upper('ABARCA, ANABEL')
+		//builds query
+		let formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=UPPER(name)like'"+this.convertUserInputToQuery()+"'";
 
 		axios.get(formQuery)
 			.then(data => {
@@ -71,8 +56,7 @@ export class Home extends Component {
 			});
 	}
 
-	//sends a GET request and fills an example query in whenever one of the example
-	//queries are clicked 
+	//sends a GET request for the example query
 	handleExampleQuery(query) {
 		//builds query from example query
 		var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=UPPER(name)like'%25BATTLE%25%25MOUNTAIN%25'";
@@ -91,11 +75,17 @@ export class Home extends Component {
 			});
 	}
 
+	//uppercases user input, and surrounds each term with %25
 	convertUserInputToQuery() {
 		let upperCaseUserInput = this.state.userInput.toUpperCase();
 		let upperCaseAndSplitArray = upperCaseUserInput.split(" ");
+		let endOfQuery="";
 
-		return upperCaseAndSplitArray;
+		for (let i=0; i<upperCaseAndSplitArray.length;i++) {
+			endOfQuery+=("%25" + upperCaseAndSplitArray[i] + "%25");
+		}
+
+		return endOfQuery;
 	}
 
 	render() {
