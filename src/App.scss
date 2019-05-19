@@ -208,12 +208,12 @@ li a:hover {
 .body-header {
   text-align:center;
   background-color:$black;
-  padding-top:30px;
-  padding-bottom:30px;
+  padding-top:$baseUnit*4;
+  padding-bottom:$baseUnit*4;
   width:100%;
   text-align:center;
   color:$contrast;
-  font-size:21px;
+  font-size:$baseUnit*2;
 }
 
 .body-header-text h2{

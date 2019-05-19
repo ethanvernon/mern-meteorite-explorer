@@ -25,6 +25,7 @@ export class Home extends Component {
 		this.formGetData = this.formGetData.bind(this);
 		this.handleFormChange = this.handleFormChange.bind(this);
 		this.handleExampleQuery = this.handleExampleQuery.bind(this);
+		this.convertUserInputToQuery = this.convertUserInputToQuery.bind(this);
 	}
 
 	componentDidMount() {
@@ -41,12 +42,18 @@ export class Home extends Component {
 
 	//when the search button is clicked, sends a GET request, result to this.state.searchResult, rendered by ResultPre.js
 	formGetData() {
-		//will find names containing 'att'
-		//var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=name like '%25att%25'"
-		//case-insensitive		
-		//var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=upper(name) like '%25ATT%25' " 
+		let upperCaseAndSplitQuery = this.convertUserInputToQuery();
+		let endOfQuery="";
+		let formQuery="";
+
+		for (let i=0; i<upperCaseAndSplitQuery.length;i++) {
+			endOfQuery+=("%25" + upperCaseAndSplitQuery[i] + "%25");
+		}
+
+		formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=UPPER(name)like'"+endOfQuery+"'";
+
 		//search for more than 1 substring, case insensitve
-		var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=UPPER(name)like'%25RAMLAT%25 %25AL%25'"
+		//var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=UPPER(name)like'%25RAMLAT%25%25AL%25'"
 
 
 		//GET /api/id/gh4g-9sfh.json?$query=select%20*%20search%20%27Battle%20Mountain%27%20limit%20100&$$query_timeout_seconds=30&$$row_count=approximate HTTP/1.1
@@ -68,7 +75,7 @@ export class Home extends Component {
 	//queries are clicked 
 	handleExampleQuery(query) {
 		//builds query from example query
-		var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=UPPER(name)like'%25BATTLE%25 %25MOUNTAIN%25'";
+		var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=UPPER(name)like'%25BATTLE%25%25MOUNTAIN%25'";
 
 		this.setState({
 			userInput: query
@@ -82,6 +89,13 @@ export class Home extends Component {
 				//handle error
 				console.log(err);
 			});
+	}
+
+	convertUserInputToQuery() {
+		let upperCaseUserInput = this.state.userInput.toUpperCase();
+		let upperCaseAndSplitArray = upperCaseUserInput.split(" ");
+
+		return upperCaseAndSplitArray;
 	}
 
 	render() {
