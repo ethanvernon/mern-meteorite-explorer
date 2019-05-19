@@ -22,9 +22,7 @@ export class HelpText extends Component {
 	render() {
 		return (
 			<div id='help-text'>
-				<p>Need a hint? try <a onClick={e => this.handleClick('username=ethan&limit=5')}><i>username=ethan&limit=5</i></a> 
-				, <a onClick={e => this.handleClick('username=ethan&to=2016-01-30')}><i>username=ethan&to=2016-01-30</i></a>
-				, or <a onClick={e => this.handleClick('username=ethan&from=2015-06-11')}><i>username=ethan&from=2015-06-11</i></a></p>
+				<p>need a hint? try <a onClick={e => this.handleClick('Battle Mountain')}><i>Battle Mountain</i></a></p>
 			</div>
 	    );
   }

@@ -9,6 +9,21 @@ $blue: #212D40;
 $gray: #364156;
 $baseUnit: 18px;
 
+@mixin placeholder-text($x) {
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $x !important;
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $x !important;
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $x !important;
+  }
+}
+
 .App {
   text-align: center;
  }
@@ -19,6 +34,7 @@ html {
 
  #root {
   font-family:Roboto;
+  background-color: $black;
  }
 
 /*--------------------------------------------------------------------------------------------------------------------------*/
@@ -33,7 +49,7 @@ button:focus {
 .navbar-container {
   background-color:$gray !important;
   width:100%;
-  height:$baseUnit*4;
+  height:$baseUnit*3;
   z-index:5;
   position:fixed;
   top:0px;
@@ -129,7 +145,7 @@ li a:hover {
 
 @media only screen and (min-width: 768px) {
   #white-nav {
-    height:$baseUnit*4;
+    height:$baseUnit*3;
   }
 }
 
@@ -191,12 +207,12 @@ li a:hover {
 
 .body-header {
   text-align:center;
-  background-color:white;
+  background-color:$black;
   padding-top:30px;
   padding-bottom:30px;
   width:100%;
   text-align:center;
-  color:#263238;
+  color:$contrast;
   font-size:21px;
 }
 
@@ -237,11 +253,40 @@ li a:hover {
 
 /*holds the form*/
 .search-container {
-  width:95%;
+  width:85%;
   max-width:800px;
   margin-left:auto;
   margin-right:auto;
+  .btn-primary {
+    background-color: $purple;
+    border-color: $purple;
+    font-size:$baseUnit !important;
+  }
+  .btn-primary:hover {
+    background-color:$contrast;
+    border-color:$contrast;
+  }
+  .input-group-text {
+    background-color:$blue !important;
+    border-color: $blue;
+    color:$contrast;
+  }
+  .form-control {
+    background-color:$gray;
+    border-color:$gray;
+    text-align:center;
+    color: $contrast;
+    font-size:$baseUnit !important;
+  }
+  .form-control:focus {
+    background-color:$gray;
+    border-color:$gray;
+    text-align:center;
+    color: $contrast;
+  }
 }
+
+@include placeholder-text($contrast);
 
 @media only screen and (max-width: 768px) {
   #prepend-query {
@@ -276,13 +321,13 @@ li a:hover {
   max-width:800px;
   margin-left:auto;
   margin-right:auto;
-  color:#263238;
-  font-size:12px;
-  margin-top:5px;
+  color:$contrast;
+  font-size:$baseUnit;
+  margin-top:$baseUnit/4;
 }
 
 #help-text a {
-  color:#1b95e0;
+  color:$purple;
   word-wrap:break-word;
   word-break:break-all;
 }
@@ -290,7 +335,7 @@ li a:hover {
 #help-text a:hover {
   cursor:pointer;
   text-decoration:underline;
-  color:purple;
+  color:$blue;
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------*/

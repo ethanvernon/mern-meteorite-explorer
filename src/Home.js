@@ -39,15 +39,8 @@ export class Home extends Component {
 		});
 	}
 
-	//when the form on the home page is submitted, this function sends a GET request
-	//and then assigns the result to this.state.searchResult which is rendered
-	//on home page by the component ResultPre.js
+	//when the search button is clicked, sends a GET request, result to this.state.searchResult, rendered by ResultPre.js
 	formGetData() {
-		//builds query from user input on home page
-		//will find all
-		//var formQuery='https://data.nasa.gov/resource/gh4g-9sfh.json?$order=name' + this.state.userInput;
-		//will find 1 name
-		//var formQuery='https://data.nasa.gov/resource/gh4g-9sfh.json?name=Atarra'
 		//will find names containing 'att'
 		//var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=name like '%25att%25'"
 		//case-insensitive		
@@ -75,7 +68,7 @@ export class Home extends Component {
 	//queries are clicked 
 	handleExampleQuery(query) {
 		//builds query from example query
-		var formQuery='/api/log/?' + query;
+		var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=UPPER(name)like'%25BATTLE%25 %25MOUNTAIN%25'";
 
 		this.setState({
 			userInput: query
@@ -96,7 +89,8 @@ export class Home extends Component {
 			<div>
 				<Title/>
 
-				<Description/>
+				{//<Description/>
+				}
 
 				<BodyHeader/>
 

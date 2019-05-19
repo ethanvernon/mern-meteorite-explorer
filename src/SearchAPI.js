@@ -29,19 +29,12 @@ export class SearchAPI extends Component {
 		return (
 			<div className='search-container'>
 
-
-				<Label for='home-query' id='small-screen-label'>https://mernlog.herokuapp.com/api/log/?</Label>
-
 				<InputGroup>
 
-					<InputGroupAddon addonType="prepend" id='prepend-query'>
-						<InputGroupText>https://mernlog.herokuapp.com/api/log/?</InputGroupText>
-					</InputGroupAddon>
-
-					<Input placeholder="username=ethan" id='home-query' type='text' value={this.props.userInput} onChange={e => this.handleChange(e)}/>
+					<Input placeholder="Type a search query here" id='home-query' type='text' value={this.props.userInput} onChange={e => this.handleChange(e)}/>
 
 					<InputGroupAddon addonType="append">
-						<Button color='primary' onClick={this.handleClick}>submit</Button>
+						<Button color='primary' onClick={this.handleClick}>search</Button>
 					</InputGroupAddon>
 
 				</InputGroup>
