@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {DocumentationTitle} from './DocumentationTitle';
 import {DocumentationDescription} from './DocumentationDescription';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './App.scss';
 
 
 export class Documentation extends Component {

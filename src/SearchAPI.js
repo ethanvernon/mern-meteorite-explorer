@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Input, InputGroupAddon, InputGroupText, InputGroup, Label } from 'reactstrap';
-import './App.css';
+import './App.scss';
 
 
 export class SearchAPI extends Component {

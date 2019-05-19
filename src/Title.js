@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './App.scss';
 
 
 export class Title extends Component {
@@ -8,9 +8,9 @@ export class Title extends Component {
 	render() {
 		return (
 			<div className='heading'>
-				<h1>MERN Exercise Log API</h1>
+				<h1>Meteorite Explorer App</h1>
 				<div className='key-solution'>
-					<p>An API for logging your daily exercise</p>
+					<p>Explore meteorite strikes across the globe by searching the Meteorite Landing dataset on the Nasa Open Data Portal.</p>
 				</div>
 			</div>
 	    );
