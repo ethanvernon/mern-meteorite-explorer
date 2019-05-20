@@ -31,8 +31,8 @@ export class ResultPre extends Component {
 	render() {
 		return (
 
-			<div>
-			<Table dataSource={this.props.searchResult} columns={columns} />
+			<div id='result-output'>
+			<Table className='result-table' dataSource={this.props.searchResult} columns={columns} />
 			</div>
 			
 	    );

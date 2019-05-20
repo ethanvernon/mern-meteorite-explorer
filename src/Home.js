@@ -30,6 +30,7 @@ export class Home extends Component {
 
 	componentDidMount() {
 		window.scrollTo(0,0);
+		this.formGetData();
 	}
 
 	//whenever the home page form SearchAPI.js changes from user input, this function
@@ -70,7 +71,7 @@ export class Home extends Component {
 		axios.get(formQuery)
 			.then(data => {
 				//sets states which renders the result in the ResultPre component 
-				this.setState({ searchResult: JSON.stringify(data.data, null, 2) });
+				this.setState({ searchResult: data.data });
 			}).catch(err =>{
 				//handle error
 				console.log(err);
