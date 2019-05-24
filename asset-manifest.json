@@ -1,16 +1,16 @@
 {
-  "main.css": "/mern-meteorite-explorer/static/css/main.5340a73b.chunk.css",
-  "main.js": "/mern-meteorite-explorer/static/js/main.86d76794.chunk.js",
-  "main.js.map": "/mern-meteorite-explorer/static/js/main.86d76794.chunk.js.map",
+  "main.css": "/mern-meteorite-explorer/static/css/main.290069ce.chunk.css",
+  "main.js": "/mern-meteorite-explorer/static/js/main.50e97f5e.chunk.js",
+  "main.js.map": "/mern-meteorite-explorer/static/js/main.50e97f5e.chunk.js.map",
   "runtime~main.js": "/mern-meteorite-explorer/static/js/runtime~main.574446d2.js",
   "runtime~main.js.map": "/mern-meteorite-explorer/static/js/runtime~main.574446d2.js.map",
   "static/css/2.cef13072.chunk.css": "/mern-meteorite-explorer/static/css/2.cef13072.chunk.css",
-  "static/js/2.51d40ed1.chunk.js": "/mern-meteorite-explorer/static/js/2.51d40ed1.chunk.js",
-  "static/js/2.51d40ed1.chunk.js.map": "/mern-meteorite-explorer/static/js/2.51d40ed1.chunk.js.map",
+  "static/js/2.38d9abb9.chunk.js": "/mern-meteorite-explorer/static/js/2.38d9abb9.chunk.js",
+  "static/js/2.38d9abb9.chunk.js.map": "/mern-meteorite-explorer/static/js/2.38d9abb9.chunk.js.map",
   "index.html": "/mern-meteorite-explorer/index.html",
-  "precache-manifest.2b9a01f48181852e4017708809f9d0d2.js": "/mern-meteorite-explorer/precache-manifest.2b9a01f48181852e4017708809f9d0d2.js",
+  "precache-manifest.df6feb554b1590c95bad5c0458396a44.js": "/mern-meteorite-explorer/precache-manifest.df6feb554b1590c95bad5c0458396a44.js",
   "service-worker.js": "/mern-meteorite-explorer/service-worker.js",
   "static/css/2.cef13072.chunk.css.map": "/mern-meteorite-explorer/static/css/2.cef13072.chunk.css.map",
-  "static/css/main.5340a73b.chunk.css.map": "/mern-meteorite-explorer/static/css/main.5340a73b.chunk.css.map",
-  "static/media/App.scss": "/mern-meteorite-explorer/static/media/starry-night.0aa001e7.jpg"
+  "static/css/main.290069ce.chunk.css.map": "/mern-meteorite-explorer/static/css/main.290069ce.chunk.css.map",
+  "static/media/App.scss": "/mern-meteorite-explorer/static/media/starry-night.38069c86.jpg"
 }
