@@ -293,6 +293,10 @@ html {
 }
 
 @media only screen and (max-width: 350px) {
+  .ant-table-header-column {
+    font-size:$baseUnit*1.4;
+  }
+
   col:nth-child(2) {
     width:85px;
   }
