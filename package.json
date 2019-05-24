@@ -2,6 +2,7 @@
   "name": "mern-urlshortener",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://ethanvernon.github.io/mern-meteorite-explorer/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
     "@fortawesome/free-brands-svg-icons": "^5.7.2",
@@ -10,6 +11,7 @@
     "antd": "^3.18.1",
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.12.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
@@ -21,7 +23,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "proxy": "http://localhost:3001",
   "eslintConfig": {
