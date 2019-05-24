@@ -9,6 +9,7 @@ $blue: #212D40;
 $gray: #364156;
 $baseUnit: 18px;
 
+
 @mixin placeholder-text($x) {
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: $x !important;
@@ -58,6 +59,7 @@ html {
   align-items: center;
   justify-content: center;
   color:white;
+  overflow-x: hidden;
   h1 {  
     letter-spacing:3px;
     font-weight:500;  
