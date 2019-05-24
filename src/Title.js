@@ -10,7 +10,7 @@ export class Title extends Component {
 			<div className='heading'>
 				<h1>Meteorite Explorer App</h1>
 				<div className='key-solution'>
-					<p>Explore meteorite strikes across the globe by searching the Meteorite Landing dataset on the Nasa Open Data Portal.</p>
+					<p>Explore meteorite strikes across the globe by searching the Meteorite Landing dataset on the Nasa Open Data Portal</p>
 				</div>
 			</div>
 	    );

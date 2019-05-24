@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from "axios";
 import './App.scss';
 import {Title} from './Title';
-import {Description} from './Description';
 import {BodyHeader} from './BodyHeader';
 import {SearchAPI} from './SearchAPI';
 import {ResultPre} from './ResultPre';
