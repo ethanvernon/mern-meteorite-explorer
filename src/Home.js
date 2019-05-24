@@ -19,7 +19,8 @@ export class Home extends Component {
 
 		this.state = {
 			userInput: "",
-			searchResult: null
+			searchResult: null,
+			pagination: null
 		};
 
 		this.formGetData = this.formGetData.bind(this);
@@ -53,6 +54,7 @@ export class Home extends Component {
 				//this.setState({ searchResult: JSON.stringify(data.data, null, 2) });
 
 				this.setState({ searchResult: data.data });
+				console.log(this.state);
 			}).catch(err =>{
 				//handle error
 				console.log(err);
@@ -112,6 +114,7 @@ export class Home extends Component {
 
 				<ResultPre
 					searchResult={this.state.searchResult}
+					pagination={this.state.pagination}
 				/>
 
 				<Footer/>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
-import {Table, Pagination} from 'antd';
+import {Table} from 'antd';
 import 'antd/dist/antd.css';
 
 const columns = [
@@ -27,6 +27,9 @@ export class ResultPre extends Component {
 
 	//a text-box on the home page which renders formatted JSON whenever
 	//a git request is sent from the home page form 
+  constructor(props) {
+    super(props);
+  }
 
 	render() {
 		return (
@@ -38,15 +41,3 @@ export class ResultPre extends Component {
 	    );
   }
 }
-
-/*
-
-			<div className='result-container'>
-				<pre id='result-output'>
-					{this.props.searchResult}
-				</pre>
-			</div>
-
-
-			
-*/
