@@ -282,8 +282,26 @@ html {
 @media only screen and (max-width: 768px) {
   .ant-table-header-column {
     font-size:$baseUnit*1.5;
+    font-weight:600;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  col:first-child {
+    width:150px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  col:first-child {
+    width:110px;
+  }
+}
+
+
+
+
+
 
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------footer---------------------------------------------------------------------------*/
