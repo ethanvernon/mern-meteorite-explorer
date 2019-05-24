@@ -8,7 +8,7 @@ self.__precacheManifest = [
     "url": "/mern-meteorite-explorer/static/js/runtime~main.574446d2.js"
   },
   {
-    "revision": "f602a183653cdb50f795",
+    "revision": "ed7e9a483e58e721213c",
     "url": "/mern-meteorite-explorer/static/js/main.86d76794.chunk.js"
   },
   {
@@ -16,15 +16,15 @@ self.__precacheManifest = [
     "url": "/mern-meteorite-explorer/static/js/2.51d40ed1.chunk.js"
   },
   {
-    "revision": "f602a183653cdb50f795",
-    "url": "/mern-meteorite-explorer/static/css/main.10fa82d5.chunk.css"
+    "revision": "ed7e9a483e58e721213c",
+    "url": "/mern-meteorite-explorer/static/css/main.48a2017a.chunk.css"
   },
   {
     "revision": "6f279b57273c1d03ff81",
     "url": "/mern-meteorite-explorer/static/css/2.cef13072.chunk.css"
   },
   {
-    "revision": "eabd30a24262448532b6e247a8d2a1b9",
+    "revision": "bf046043f4ab83a72b615cfe7b191b4c",
     "url": "/mern-meteorite-explorer/index.html"
   }
 ];
