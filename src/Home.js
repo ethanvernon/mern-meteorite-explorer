@@ -7,6 +7,7 @@ import {BodyHeader} from './BodyHeader';
 import {SearchAPI} from './SearchAPI';
 import {ResultPre} from './ResultPre';
 import {HelpText} from './HelpText';
+import {Footer} from './Footer';
 
 
 
@@ -113,6 +114,8 @@ export class Home extends Component {
 				<ResultPre
 					searchResult={this.state.searchResult}
 				/>
+
+				<Footer/>
 
 			</div>
 		)
