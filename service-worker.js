@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/mern-meteorite-explorer/precache-manifest.055041f0e8fdecfe2ee7783cdc7ba7d0.js"
+  "/mern-meteorite-explorer/precache-manifest.b5a704e87c625c175aa90ed779fda411.js"
 );
 
 workbox.clientsClaim();
