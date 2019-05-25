@@ -24,6 +24,7 @@ export class SearchAPI extends Component {
 	//copies a shortened URL to keyboard
 	handleClick() {
 		this.props.handleClick();
+		this.props.handlePagination();
 	}
 
 	handleKeyPress(target) {

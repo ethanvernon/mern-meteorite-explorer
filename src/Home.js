@@ -20,7 +20,7 @@ export class Home extends Component {
 		this.state = {
 			userInput: "",
 			searchResult: null,
-			pagination: null,
+			pagination: {},
 			loading: 'search'
 		};
 
@@ -28,6 +28,7 @@ export class Home extends Component {
 		this.handleFormChange = this.handleFormChange.bind(this);
 		this.handleExampleQuery = this.handleExampleQuery.bind(this);
 		this.convertUserInputToQuery = this.convertUserInputToQuery.bind(this);
+		this.handlePagination = this.handlePagination.bind(this);
 	}
 
 	componentDidMount() {
@@ -56,12 +57,15 @@ export class Home extends Component {
 		axios.get(formQuery)
 			.then(data => {
 				//sets states which renders the result in the ResultPre component 
-				this.setState({ searchResult: data.data, loading: 'search'  });
-				console.log(this.state);
+				this.setState({ searchResult: data.data, loading: 'search', pagination: {current: 1}  });
+				console.log(this.state.pagination);
 			}).catch(err =>{
 				//handle error
 				console.log(err);
 				this.setState({searchResult: 'error', loading: 'search'});
+			}).then(data => {
+				//sets states which renders the result in the ResultPre component 
+				this.setState({ pagination: {}  });
 			});
 	}
 
@@ -99,6 +103,10 @@ export class Home extends Component {
 		return endOfQuery;
 	}
 
+	handlePagination() {
+		console.log(this.state.pagination);
+	}
+
 	render() {
 		return(
 			<div>
@@ -113,7 +121,8 @@ export class Home extends Component {
 					handleChange={this.handleFormChange}
 					handleClick={this.formGetData}
 					userInput={this.state.userInput}
-					loading={this.state.loading}/>
+					loading={this.state.loading}
+					handlePagination={this.handlePagination}/>
 
 				<HelpText
 					handleClick={this.handleExampleQuery}

@@ -37,7 +37,7 @@ export class ResultPre extends Component {
 
 			<div id='result-output'>
         { this.props.searchResult != 'error' &&
-        <Table className='result-table' dataSource={this.props.searchResult} columns={columns} />
+        <Table className='result-table' dataSource={this.props.searchResult} columns={columns} pagination={this.props.pagination}/>
         }
         { this.props.searchResult == 'error' &&
           <ErrorTable/>
