@@ -8,23 +8,23 @@ self.__precacheManifest = [
     "url": "/mern-meteorite-explorer/static/js/runtime~main.574446d2.js"
   },
   {
-    "revision": "7532bca5e14f5cb879ab",
-    "url": "/mern-meteorite-explorer/static/js/main.50e97f5e.chunk.js"
+    "revision": "a299c358f93a8504a0c8",
+    "url": "/mern-meteorite-explorer/static/js/main.c3f1c81c.chunk.js"
   },
   {
-    "revision": "ab9d3be608d190fb4b7f",
-    "url": "/mern-meteorite-explorer/static/js/2.38d9abb9.chunk.js"
+    "revision": "afe92d5219364d579fea",
+    "url": "/mern-meteorite-explorer/static/js/2.938aab21.chunk.js"
   },
   {
-    "revision": "7532bca5e14f5cb879ab",
-    "url": "/mern-meteorite-explorer/static/css/main.290069ce.chunk.css"
+    "revision": "a299c358f93a8504a0c8",
+    "url": "/mern-meteorite-explorer/static/css/main.c9eb5cb3.chunk.css"
   },
   {
-    "revision": "ab9d3be608d190fb4b7f",
+    "revision": "afe92d5219364d579fea",
     "url": "/mern-meteorite-explorer/static/css/2.cef13072.chunk.css"
   },
   {
-    "revision": "2226ced0341ba0f3717024595273efa9",
+    "revision": "b639c29a69801fdb0a4736c05907cf48",
     "url": "/mern-meteorite-explorer/index.html"
   }
 ];
