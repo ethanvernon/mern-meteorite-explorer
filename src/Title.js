@@ -50,7 +50,7 @@ export class Title extends Component {
 
 		if (this.state.width<700) {
 			speedFactor=.4;
-			heightAdjust=160;
+			heightAdjust=130;
 			imageWidth=84;
 			startPos=-200;	
 			newLeft=(scroll*3.52*speedFactor-170);
