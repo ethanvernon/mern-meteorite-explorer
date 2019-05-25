@@ -1,35 +1,7 @@
 import React, { Component } from 'react';
-//import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
-import {Table} from 'antd';
-import 'antd/dist/antd.css';
-
-const columns = [
-  {
-    title: 'Name',
-    dataIndex: 'name',
-    key: 'name'
-  },
-  {
-    title: 'Fall',
-    dataIndex: 'fall',
-    key: 'fall'
-  },
-  {
-    title: 'Mass',
-    dataIndex: 'mass',
-    key: 'mass',
-  },
-];
-
 
 export class ErrorTable extends Component {
-
-	//a text-box on the home page which renders formatted JSON whenever
-	//a git request is sent from the home page form 
-  constructor(props) {
-    super(props);
-  }
 
 	render() {
 		return (

@@ -270,6 +270,11 @@ html {
     color: $contrast;
     font-size:$baseUnit;
   }
+  .ant-empty-image {
+    img {
+      content:url(./empty.svg) !important;
+    }
+  }
 }
 
 .ant-pagination-item-link {
