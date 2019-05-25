@@ -60,8 +60,8 @@ export class Title extends Component {
 			newTop=(scroll*1.5+startPos);
 		}
 		let newOpacity;
-		console.log("left"+this.state.left);
-		console.log(this.state.width);
+		//console.log("left"+this.state.left);
+		//console.log(this.state.width);
 
 		if (newLeft <= this.state.width*.1) {
 			this.state.width < 700 ? newOpacity=5 : newOpacity=3;
