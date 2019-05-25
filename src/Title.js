@@ -47,6 +47,7 @@ export class Title extends Component {
 		let startPos=85;
 		let newTop;
 		let newLeft;
+		let displayNoneVal=this.state.width;
 
 		if (this.state.width<700) {
 			speedFactor=.4;
@@ -55,6 +56,7 @@ export class Title extends Component {
 			startPos=-200;	
 			newLeft=(scroll*3.52*speedFactor-170);
 			newTop=(scroll*1.5*(speedFactor*2.5)+startPos)+heightAdjust;
+			displayNoneVal-=20;
 		} else {
 			newLeft=(scroll*4-170);
 			newTop=(scroll*1.5+startPos);
@@ -72,7 +74,7 @@ export class Title extends Component {
 		}
 
 
-		if (newLeft+imageWidth >= this.state.width) {
+		if (newLeft+imageWidth >= displayNoneVal) {
 			this.setState({
 				display:'none'
 			});
