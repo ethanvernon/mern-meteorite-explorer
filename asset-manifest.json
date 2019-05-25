@@ -1,5 +1,5 @@
 {
-  "main.css": "/mern-meteorite-explorer/static/css/main.9fadc0ce.chunk.css",
+  "main.css": "/mern-meteorite-explorer/static/css/main.e1508eaf.chunk.css",
   "main.js": "/mern-meteorite-explorer/static/js/main.d39b08e9.chunk.js",
   "main.js.map": "/mern-meteorite-explorer/static/js/main.d39b08e9.chunk.js.map",
   "runtime~main.js": "/mern-meteorite-explorer/static/js/runtime~main.574446d2.js",
@@ -8,9 +8,9 @@
   "static/js/2.c91e33ac.chunk.js": "/mern-meteorite-explorer/static/js/2.c91e33ac.chunk.js",
   "static/js/2.c91e33ac.chunk.js.map": "/mern-meteorite-explorer/static/js/2.c91e33ac.chunk.js.map",
   "index.html": "/mern-meteorite-explorer/index.html",
-  "precache-manifest.3f0e773eca0a5ee65d40dc3594143425.js": "/mern-meteorite-explorer/precache-manifest.3f0e773eca0a5ee65d40dc3594143425.js",
+  "precache-manifest.693f119513bb5ea4467b9d4b016fbf17.js": "/mern-meteorite-explorer/precache-manifest.693f119513bb5ea4467b9d4b016fbf17.js",
   "service-worker.js": "/mern-meteorite-explorer/service-worker.js",
   "static/css/2.cef13072.chunk.css.map": "/mern-meteorite-explorer/static/css/2.cef13072.chunk.css.map",
-  "static/css/main.9fadc0ce.chunk.css.map": "/mern-meteorite-explorer/static/css/main.9fadc0ce.chunk.css.map",
+  "static/css/main.e1508eaf.chunk.css.map": "/mern-meteorite-explorer/static/css/main.e1508eaf.chunk.css.map",
   "static/media/App.scss": "/mern-meteorite-explorer/static/media/starry-night.e0a7c599.jpg"
 }
