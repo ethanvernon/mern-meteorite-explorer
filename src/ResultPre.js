@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import {Table} from 'antd';
+import {ErrorTable} from './ErrorTable';
 import 'antd/dist/antd.css';
 
 const columns = [
@@ -35,9 +36,15 @@ export class ResultPre extends Component {
 		return (
 
 			<div id='result-output'>
-			 <Table className='result-table' dataSource={this.props.searchResult} columns={columns} />
+        { this.props.searchResult != 'error' &&
+        <Table className='result-table' dataSource={this.props.searchResult} columns={columns} />
+        }
+        { this.props.searchResult == 'error' &&
+          <ErrorTable/>
+        }
 			</div>
 			
 	    );
   }
 }
+

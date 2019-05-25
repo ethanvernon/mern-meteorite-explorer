@@ -149,7 +149,7 @@ html {
 
 /*holds the form*/
 .search-container {
-  width:85%;
+  width:95%;
   max-width:800px;
   margin-left:auto;
   margin-right:auto;
@@ -157,10 +157,19 @@ html {
     background-color: $purple;
     border-color: $purple;
     font-size:$baseUnit !important;
+    width:100px;
   }
   .btn-primary:hover {
     background-color:$contrast;
     border-color:$contrast;
+  }
+  .btn-primary:active {
+    background-color:$contrast !important;
+    border-color:$contrast !important;
+  }
+  .btn-primary:focus {
+    background-color:$contrast !important;
+    border-color:$contrast !important;
   }
   .input-group-text {
     background-color:$blue !important;
@@ -180,6 +189,10 @@ html {
     text-align:center;
     color: $contrast;
   }
+}
+
+*:focus {
+    box-shadow: none !important;
 }
 
 @include placeholder-text($contrast);
@@ -252,6 +265,10 @@ html {
   }
   table {
     border-bottom: 2px solid $purple !important;
+  }  
+  .ant-empty-description {
+    color: $contrast;
+    font-size:$baseUnit;
   }
 }
 

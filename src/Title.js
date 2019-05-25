@@ -53,7 +53,7 @@ export class Title extends Component {
 			heightAdjust=160;
 			imageWidth=84;
 			startPos=-200;	
-			newLeft=(scroll*4*speedFactor-170);
+			newLeft=(scroll*3.52*speedFactor-170);
 			newTop=(scroll*1.5*(speedFactor*2.5)+startPos)+heightAdjust;
 		} else {
 			newLeft=(scroll*4-170);

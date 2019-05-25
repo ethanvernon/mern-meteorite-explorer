@@ -20,7 +20,8 @@ export class Home extends Component {
 		this.state = {
 			userInput: "",
 			searchResult: null,
-			pagination: null
+			pagination: null,
+			loading: 'search'
 		};
 
 		this.formGetData = this.formGetData.bind(this);
@@ -48,16 +49,19 @@ export class Home extends Component {
 		//builds query
 		let formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=UPPER(name)like'"+this.convertUserInputToQuery()+"'";
 
+		this.setState({
+			loading: 'loading...'
+		});
+
 		axios.get(formQuery)
 			.then(data => {
 				//sets states which renders the result in the ResultPre component 
-				//this.setState({ searchResult: JSON.stringify(data.data, null, 2) });
-
-				this.setState({ searchResult: data.data });
+				this.setState({ searchResult: data.data, loading: 'search'  });
 				console.log(this.state);
 			}).catch(err =>{
 				//handle error
 				console.log(err);
+				this.setState({searchResult: 'error', loading: 'search'});
 			});
 	}
 
@@ -67,16 +71,18 @@ export class Home extends Component {
 		var formQuery="https://data.nasa.gov/resource/gh4g-9sfh.json?$where=UPPER(name)like'%25BATTLE%25%25MOUNTAIN%25'";
 
 		this.setState({
-			userInput: query
+			userInput: query,
+			loading: 'loading...'
 		});
 
 		axios.get(formQuery)
 			.then(data => {
 				//sets states which renders the result in the ResultPre component 
-				this.setState({ searchResult: data.data });
+				this.setState({ searchResult: data.data, loading: 'search' });
 			}).catch(err =>{
 				//handle error
 				console.log(err);
+				this.setState({searchResult: 'error', loading: 'search'});
 			});
 	}
 
@@ -106,7 +112,8 @@ export class Home extends Component {
 				<SearchAPI
 					handleChange={this.handleFormChange}
 					handleClick={this.formGetData}
-					userInput={this.state.userInput}/>
+					userInput={this.state.userInput}
+					loading={this.state.loading}/>
 
 				<HelpText
 					handleClick={this.handleExampleQuery}

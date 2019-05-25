@@ -41,7 +41,7 @@ export class SearchAPI extends Component {
 					<Input placeholder="Type a search query" id='home-query' type='text' value={this.props.userInput} onChange={e => this.handleChange(e)} onKeyPress={this.handleKeyPress}/>
 
 					<InputGroupAddon addonType="append">
-						<Button color='primary' onClick={this.handleClick}>search</Button>
+						<Button color='primary' onClick={this.handleClick}>{this.props.loading}</Button>
 					</InputGroupAddon>
 
 				</InputGroup>
