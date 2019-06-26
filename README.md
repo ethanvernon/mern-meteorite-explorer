@@ -1,7 +1,7 @@
 # NASA Meteorite Landing Web Service
 
 ### Summary
-This project uses HTML, CSS, React.js, Ant Design, axios, Bootstrap, and SASS. It was completed between May 17th and May 25th for acceptance into a pair-programming cohort called Chingu. This web service uses tabulation to help users search and view meteorite landings found in NASA's Meteorite Landing database.
+This project uses HTML, CSS, React.js, Ant Design, axios, Bootstrap, and SASS. It was completed between May 17th and May 25th for acceptance into a pair-programming cohort called Chingu. This web service uses tabulation to help users search and view meteorite landings found in NASA's Meteorite Landing database.  It is available here: https://ethanvernon.github.io/mern-meteorite-explorer/
 
 ### Landing page
 Responsive, full-screen landing page with shooting star animation.
